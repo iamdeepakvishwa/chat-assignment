@@ -19,6 +19,31 @@
   
 ## Can you define the schema for the same
   * Refer to the Schema.js File 
+  * Schema Format ,
+    * Users Schema
+    * Groups 
+      * User_owner_id -> user 
+      * group_id
+    * Group Admins
+      * group_id 
+      * user_id -> user
+    * Group Members 
+      * group_id -> group
+      * user_id -> user
+    * Group Invites 
+      * group_id -> group
+      * invite String
+    * Tasks
+      * group_id
+			* starting date
+			* time Alloted
+			* Assigned to 
+			* Assigned By
+			* Description
+    * Messages
+      * From_id 
+      * To_id 
+      * Date 
 
 
 ## Adding caching to make it super fast (explain about this) 
@@ -92,6 +117,15 @@
 
     ```
     
+## Push Notifications.
+
+  This particular task will be done by following way
+  
+  * Setup a task runner to listen to particular Events .
+  * We need to Socket support or socket handler .
+  * Check Whether a particular event happened or not and using the socket Send the response 
+  * We can Show the response in appropriate window in the client Side
+
     
       
 
